@@ -290,6 +290,8 @@ The summary never contains counterparty addresses or transaction references, in 
 
 **Share links.** `/share?…` links and `/api/og/result` thumbnails carry aggregate values only (index, band, signal counts, window size, demo flag, methodology version); there is no parameter that could carry an address. Parameters are schema-validated and fall back to neutral defaults on any invalid value. Share links are unsigned, so the share page states that its values are unverified. A shared index plus window size is far less identifying than the report itself, but it is not zero information — share deliberately.
 
+**Third-party swap widget (ChangeNOW).** The homepage embeds ChangeNOW's exchange widget in an `<iframe>` served from `changenow.io` (configured in `lib/config/partners.ts`; optional partner id `NEXT_PUBLIC_CHANGENOW_LINK_ID`). CLOAK passes only display parameters (default pair SOL → USDC on Solana, colours, language) and never sees the swap, the deposit or payout addresses, the funds or any keys — the swap is executed entirely by ChangeNOW under its own terms, inside its own origin. A swap through an exchange can break the *direct* on-chain link between two wallets, but the exchange sees both sides, may apply its own AML verification, and matching amounts or timing can still correlate the transfers; the site states these limits next to the widget.
+
 ## Privacy limitations of CLOAK itself
 
 - **Scanning reveals interest.** Submitting an address tells the CLOAK server, and in live mode Helius, that someone is interested in that address. Scanning your own address from your own IP links the two in the CLOAK server's memory for the cache TTL and in any platform logs.
