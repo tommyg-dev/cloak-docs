@@ -1,0 +1,100 @@
+{
+    "address": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+    "mode": "demo",
+    "demo": true,
+    "balances": {
+        "address": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "lamports": 42371000000,
+        "sol": 42.371,
+        "solUsd": 6355.650000000001,
+        "holdings": [
+            {
+                "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+                "symbol": "USDC",
+                "name": "USD Coin",
+                "amount": 1250.4,
+                "decimals": 6,
+                "usdValue": 1250.4,
+                "kind": "fungible"
+            },
+            {
+                "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+                "symbol": "JUP",
+                "name": "Jupiter",
+                "amount": 340.2,
+                "decimals": 6,
+                "usdValue": 272.16,
+                "kind": "fungible"
+            },
+            {
+                "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+                "symbol": "BONK",
+                "name": "Bonk",
+                "amount": 18400000,
+                "decimals": 5,
+                "usdValue": 368.00000000000006,
+                "kind": "fungible"
+            },
+            {
+                "mint": "E5w58pjmSKjusGe3avSmMiuCeVtx9mhZhCcZ1Sc5X2MU",
+                "symbol": "SPCMN",
+                "name": "Specimen Token (fictional)",
+                "amount": 9000,
+                "decimals": 6,
+                "usdValue": null,
+                "kind": "fungible"
+            },
+            {
+                "mint": "9FcwBK4dRAVbRR8Et8jeuqZTL3LUfCUTHFTD2W4ZtepC",
+                "symbol": null,
+                "name": "Fictional Collection #0412",
+                "amount": 1,
+                "decimals": 0,
+                "usdValue": null,
+                "kind": "nft"
+            },
+            {
+                "mint": "F6z8Rc5fQXxWecCM3fcLz3aWYQx3FctJnEtDxgmWL1Xm",
+                "symbol": null,
+                "name": "Fictional Collection #1187",
+                "amount": 1,
+                "decimals": 0,
+                "usdValue": null,
+                "kind": "nft"
+            }
+        ],
+        "truncated": false,
+        "fetchedAt": "2026-09-30T21:00:00.000Z"
+    },
+    "coverage": {
+        "txCount": 96,
+        "successCount": 93,
+        "failedCount": 3,
+        "oldest": 1784410918,
+        "newest": 1790797664,
+        "spanDays": 73.9,
+        "pagesFetched": 1,
+        "requestedLimit": 96,
+        "limitReached": false,
+        "fetchedAt": "2026-10-08T15:16:30.988Z"
+    },
+    "counterpartyCount": 20,
+    "interactionTypes": [
+        {
+            "kind": "transfer",
+            "count": 57
+        },
+        {
+            "kind": "swap",
+            "count": 29
+        },
+        {
+            "kind": "program",
+            "count": 7
+        },
+        {
+            "kind": "failed",
+            "count": 3
+        }
+    ]
+}

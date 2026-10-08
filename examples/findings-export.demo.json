@@ -1,0 +1,1105 @@
+{
+  "format": "cloak-findings/1",
+  "reportId": "GR-0URAI4F",
+  "mode": "demo",
+  "demo": true,
+  "address": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+  "generatedAt": "2026-09-30T21:00:00.000Z",
+  "methodologyVersion": "cloak-index/1.0",
+  "coverage": {
+    "txCount": 96,
+    "successCount": 93,
+    "failedCount": 3,
+    "oldest": 1784410918,
+    "newest": 1790797664,
+    "spanDays": 73.9,
+    "pagesFetched": 1,
+    "requestedLimit": 300,
+    "limitReached": false,
+    "fetchedAt": "2026-09-30T21:00:00.000Z"
+  },
+  "cloakIndex": {
+    "status": "scored",
+    "value": 77,
+    "band": "high",
+    "components": [
+      {
+        "key": "holdings",
+        "label": "Visible holdings",
+        "weight": 15,
+        "raw": 0.6,
+        "basis": "4 fungible, 2 NFT, SOL present \u2014 saturates at 10",
+        "points": 9
+      },
+      {
+        "key": "repeated",
+        "label": "Repeated counterparties",
+        "weight": 20,
+        "raw": 1,
+        "basis": "6 counterparties with \u22653 shared transactions \u2014 saturates at 6",
+        "points": 20
+      },
+      {
+        "key": "concentration",
+        "label": "Relationship concentration",
+        "weight": 15,
+        "raw": 0.5535714285714286,
+        "basis": "Top 3 counterparties hold 55% of 56 transfer interactions",
+        "points": 8.3
+      },
+      {
+        "key": "temporal",
+        "label": "Activity rhythm",
+        "weight": 15,
+        "raw": 0.7625000000000001,
+        "basis": "80% of activity in the busiest 4h UTC window (uniform \u2248 17%)",
+        "points": 11.44
+      },
+      {
+        "key": "programs",
+        "label": "Program footprint",
+        "weight": 10,
+        "raw": 0.3,
+        "basis": "3 distinct non-infrastructure programs \u2014 saturates at 10",
+        "points": 3
+      },
+      {
+        "key": "trading",
+        "label": "Public trading",
+        "weight": 15,
+        "raw": 1,
+        "basis": "29 swaps observed \u2014 saturates at 15",
+        "points": 15
+      },
+      {
+        "key": "labels",
+        "label": "Public labeling",
+        "weight": 10,
+        "raw": 1,
+        "basis": "7 transactions with publicly labeled counterparties",
+        "points": 10
+      }
+    ],
+    "evaluatedWeight": 100,
+    "methodologyVersion": "cloak-index/1.0"
+  },
+  "labelSupport": "demo",
+  "walletLabel": null,
+  "signals": [
+    {
+      "id": "repeated-7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+      "category": "repeated-counterparty",
+      "title": "Recurring relationship with 7n6s\u2026Lktp",
+      "severity": "high",
+      "confidence": "high",
+      "observation": "13 transactions with this counterparty (in both directions): 4.9650 SOL received, 11.8680 SOL sent, 0 token transfers.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "35pZntzW6DioZBs4QXFth9KQHEAaYsXqqhpZ4ypPuDbZWZ65DsdBtGkd6LeUyaP4kwuEJkws4Jyq9J5K3C8PXjJq",
+          "timestamp": 1790797664,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2bnc1W5RWCpgu5MTmrP9rRUKcBG7P3BDTWQ47REKDmn3eynuaqJ8pdzfQuBvAfiiCUs4rnVZoZn51ZqMfJC4vY81",
+          "timestamp": 1790516922,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4ajtNq6r8yu4GbbBXGkizXptSX5GcDRj7t6jtjw9UK1WP94hDLxri72pGxsdNHYVmMSNER2qy19PR6h4RKwJXSAP",
+          "timestamp": 1790078771,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2SekUA4pvKEf2r6uKYb5YGBLQGSk8etJpCkbkSLU1CP4pwnNLikdXqwP7ttVcwJHphws1tVvcZhMMKFotJJceZSD",
+          "timestamp": 1789386805,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5RN1hjBkiA5v5hHwNWN8gYkUx71SWipjE7cAdjonVikfZqyNwDcjpjvLRFFT6Xh6iMVi8fgHyNiHMppCSU971da9",
+          "timestamp": 1789211791,
+          "note": "Transfer sent to counterparty"
+        }
+      ],
+      "limitation": "Shows that the two addresses transacted, not who controls either one or why. The counterparty may be a service, a contract-owned account or another wallet of the same person.",
+      "recommendation": "Recurring transfers make two addresses easy to cluster. Use a fresh receiving address for relationships you do not want linked to this wallet.",
+      "subjects": [
+        "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp"
+      ]
+    },
+    {
+      "id": "repeated-HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN",
+      "category": "repeated-counterparty",
+      "title": "Recurring relationship with HVqm\u2026YwrN",
+      "severity": "high",
+      "confidence": "high",
+      "observation": "11 transactions with this counterparty (outbound only): 0.0000 SOL received, 16.5000 SOL sent, 0 token transfers.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "Ci8SFjgd3k5izZ7teYJAWwyjrSSEKvinNLPMg7MTJsoWDinRhBzy9Tn5GCUW1ejLPn731nkL549xLpnfEzzACvy",
+          "timestamp": 1790779161,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "32GtSrjHTo73PoAQdpFDQ4F8pwG5Z17bxJZbi2trdPzpLKQBewqxpZFmcBdkPxN1Q1h9dX79s2isHLKm6MmfDAwP",
+          "timestamp": 1790167590,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2ouQyu95K1ziZ9wpxtNtCWJmci8Ve5fD3f9ZEw5mjnk7kC1BunDpx7kpn2koxtcuPh7yAFvZeNddMpmdVprWYwfk",
+          "timestamp": 1789557313,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4VYhDBx47hPFYPK3hJL1tJZrxCGoYEPJ2cFYrKjaatJRASxE1ebpRpZJAzJBsEYBCixHypBFaKLBepuUK5sbBbaP",
+          "timestamp": 1788960969,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4nVY26uGUHnQNKXtpf6r2iqzzH9eZNYe9VJygLhmBhVqV74BSxJx3aMBNeFaZrfg6DrvNQkRhvRea3xtCEGEP6pn",
+          "timestamp": 1788354727,
+          "note": "Transfer sent to counterparty"
+        }
+      ],
+      "limitation": "Shows that the two addresses transacted, not who controls either one or why. The counterparty may be a service, a contract-owned account or another wallet of the same person.",
+      "recommendation": "Recurring transfers make two addresses easy to cluster. Use a fresh receiving address for relationships you do not want linked to this wallet.",
+      "subjects": [
+        "HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN"
+      ]
+    },
+    {
+      "id": "temporal-peak",
+      "category": "temporal",
+      "title": "Recognizable daily activity rhythm",
+      "severity": "high",
+      "confidence": "high",
+      "observation": "80% of timestamped activity falls inside 11:00\u201315:00 UTC. Evenly spread activity would put about 17% in any 4-hour window.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "Ci8SFjgd3k5izZ7teYJAWwyjrSSEKvinNLPMg7MTJsoWDinRhBzy9Tn5GCUW1ejLPn731nkL549xLpnfEzzACvy",
+          "timestamp": 1790779161,
+          "note": "Inside peak window"
+        },
+        {
+          "kind": "tx",
+          "ref": "2bnc1W5RWCpgu5MTmrP9rRUKcBG7P3BDTWQ47REKDmn3eynuaqJ8pdzfQuBvAfiiCUs4rnVZoZn51ZqMfJC4vY81",
+          "timestamp": 1790516922,
+          "note": "Inside peak window"
+        },
+        {
+          "kind": "tx",
+          "ref": "5f3oBp3yavNusEiWwDxkwcSDqsazfQPtsnVYzUwJkkU2tX7NG95WzsMiNyzW9XR1YjHybnatG4c7YeMN3nMje4cC",
+          "timestamp": 1790509726,
+          "note": "Inside peak window"
+        },
+        {
+          "kind": "tx",
+          "ref": "5W4tCTryG8qrpTnoQ9vGcZdT7sycBLDuamSMwnJJsXF9WUrB1HmJnvfL7yR9GMD5onkcGmtafTrrDJfLf4V3zqDg",
+          "timestamp": 1790508732,
+          "note": "Inside peak window"
+        },
+        {
+          "kind": "tx",
+          "ref": "74iNsT3p3u8xB61d5Ty3oMuwsmD6Y39U7zESDHk9NSSABm8XeL6JXfFpZatGr3EPiUJC5R2AGJfPXqjxnzScVxq",
+          "timestamp": 1790507475,
+          "note": "Inside peak window"
+        },
+        {
+          "kind": "tx",
+          "ref": "KvBVdLq9n4t79ceinZ4u48UXRBCqHmXhBZcbCf1SpZsjfo1FUvAjp7e3jaUojXJV5cgoLstX7wcEd7zfKMHH9dg",
+          "timestamp": 1790340930,
+          "note": "Inside peak window"
+        }
+      ],
+      "limitation": "This does not reveal a location or time zone. Bots, schedulers and shared wallets produce rhythms too. It does make the activity pattern comparable across wallets.",
+      "recommendation": "Patterns in timing can link wallets that share an owner. Avoid operating several wallets in the same short sessions.",
+      "subjects": []
+    },
+    {
+      "id": "trading-public",
+      "category": "trading",
+      "title": "Trading history is public",
+      "severity": "high",
+      "confidence": "high",
+      "observation": "29 swaps across 4 tokens, mostly via jupiter. Entry sizes, timing and token choices are visible to anyone.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "5W4tCTryG8qrpTnoQ9vGcZdT7sycBLDuamSMwnJJsXF9WUrB1HmJnvfL7yR9GMD5onkcGmtafTrrDJfLf4V3zqDg",
+          "timestamp": 1790508732,
+          "note": "Swap via Jupiter"
+        },
+        {
+          "kind": "tx",
+          "ref": "KvBVdLq9n4t79ceinZ4u48UXRBCqHmXhBZcbCf1SpZsjfo1FUvAjp7e3jaUojXJV5cgoLstX7wcEd7zfKMHH9dg",
+          "timestamp": 1790340930,
+          "note": "Swap via Jupiter"
+        },
+        {
+          "kind": "tx",
+          "ref": "jDdAEp6ShPrQ3gEmzpq3H62bs2BGbX6Mfc8bR4VYKuWTyCvGg27cAgogXCicgqKBDCQGVeV9vSPAHVJdDrS1TCy",
+          "timestamp": 1790085626,
+          "note": "Swap via Jupiter"
+        },
+        {
+          "kind": "tx",
+          "ref": "2bF1wD3tWy8y2xQrdyDYz5vkqR7iNwKqBdGtfm5w5gs6pE9gkswTDowr7NWaKpdfmrWtdh4CpJk2fGRvDdWgu42C",
+          "timestamp": 1789560487,
+          "note": "Swap via Jupiter"
+        },
+        {
+          "kind": "tx",
+          "ref": "2i8rFVsrWDUgwRspXnPgiTqqXJf7MBLyQAvCPKVAsVExhV6a2Q6jJi5MYJHKjNNHpSayZKpxhTACocN7dzzmBpvr",
+          "timestamp": 1789482092,
+          "note": "Swap via Jupiter"
+        },
+        {
+          "kind": "tx",
+          "ref": "5ZgPoN4USQJ4ANJC5TbjANFyvKqq6ZQYKfNJqGUbdrHRjGrP7cwLhvjGD394tpVL64KuFHu2DLC5UiXv8JoLDpBA",
+          "timestamp": 1789300488,
+          "note": "Swap via Jupiter"
+        }
+      ],
+      "limitation": "Swap amounts are as reported by the venue. Profit and loss cannot be determined from a partial window.",
+      "recommendation": "Trade from a dedicated address funded through a path that is not tied to your main wallet.",
+      "subjects": []
+    },
+    {
+      "id": "funding-earliest",
+      "category": "funding",
+      "title": "First funding source is visible",
+      "severity": "medium",
+      "confidence": "high",
+      "observation": "25.0000 SOL arrived from 5XuR\u2026rh9K on 2026-07-18, the earliest inbound SOL in the wallet history.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "66ePpi4zQnuv3BvJBPDgz3fKD882u1Cn2UPDhmVhm4Ctys3wUQB5sD24727FNR2X3tBitiLTUe7KyLUce813ZGDu",
+          "timestamp": 1784410918,
+          "note": "Earliest inbound SOL transfer"
+        }
+      ],
+      "limitation": "Funding links two addresses but does not show who controls the funder.",
+      "recommendation": "The address that funds a new wallet is often the strongest link back to its owner. Fund new wallets from a source you are comfortable being associated with.",
+      "subjects": [
+        "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K"
+      ]
+    },
+    {
+      "id": "holdings-visible",
+      "category": "holdings",
+      "title": "Holdings are publicly readable",
+      "severity": "medium",
+      "confidence": "high",
+      "observation": "Anyone can read this address's balance: 42.3710 SOL, 4 fungible tokens and 2 NFTs, with roughly $8,246 of provider-priced value.",
+      "evidence": [
+        {
+          "kind": "account",
+          "ref": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+          "timestamp": null,
+          "note": "Balance snapshot at 2026-09-30T21:00:00.000Z"
+        },
+        {
+          "kind": "token",
+          "ref": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "timestamp": null,
+          "note": "1,250.4 USDC"
+        },
+        {
+          "kind": "token",
+          "ref": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "timestamp": null,
+          "note": "340.2 JUP"
+        },
+        {
+          "kind": "token",
+          "ref": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "timestamp": null,
+          "note": "18,400,000 BONK"
+        },
+        {
+          "kind": "token",
+          "ref": "E5w58pjmSKjusGe3avSmMiuCeVtx9mhZhCcZ1Sc5X2MU",
+          "timestamp": null,
+          "note": "9,000 SPCMN"
+        }
+      ],
+      "limitation": "A snapshot, not a history. USD values come from the provider and are missing for unpriced tokens. Holdings in other wallets controlled by the same person are not visible here.",
+      "recommendation": "Keep long-term holdings in an address you never use for payments, mints or social activity, so a single payment does not reveal your full balance.",
+      "subjects": [
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "E5w58pjmSKjusGe3avSmMiuCeVtx9mhZhCcZ1Sc5X2MU",
+        "9FcwBK4dRAVbRR8Et8jeuqZTL3LUfCUTHFTD2W4ZtepC",
+        "F6z8Rc5fQXxWecCM3fcLz3aWYQx3FctJnEtDxgmWL1Xm"
+      ]
+    },
+    {
+      "id": "label-5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+      "category": "labeling",
+      "title": "Interaction with labeled entity: Demo Exchange (fictional)",
+      "severity": "medium",
+      "confidence": "medium",
+      "observation": "7 transactions with an address publicly labeled \"Demo Exchange (fictional)\" (Centralized Exchange). Exchanges hold off-chain account records that can be matched to deposit and withdrawal transactions.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "5f3oBp3yavNusEiWwDxkwcSDqsazfQPtsnVYzUwJkkU2tX7NG95WzsMiNyzW9XR1YjHybnatG4c7YeMN3nMje4cC",
+          "timestamp": 1790509726,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "TGoXzE1n4BuF4trfrxdxg3BrHbs4bxCcztB3jnaFLBwKybK9Bsr8twZhQQDJrfQptX2LpAEgFaadGagUBiZV2iC",
+          "timestamp": 1790173066,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5ophe8p5RBgEXW4o5wwz4M4hF5yhXkKTjpZkD64ihyxQ8s5yMfDDCA5HNuURMpZG5zJKVqJK8w7iFUie4FRpkan5",
+          "timestamp": 1789389578,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2gsPhNzBfDsUj61Msf19jfHQzjC62TptCdYJnJLwgzBidmYKCpNAzNJk7NEKRi55WHBebgKszPC2DGvJ1WTn4Jmq",
+          "timestamp": 1787842159,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "uqGWQmo4DsanQ4EyN6nhWTvxkwo5M5ynQF4M9TdnAQyPiYe4qDokYsbd9itkMLy8x8E5hLhsvb8sk9qDQTNYMRd",
+          "timestamp": 1787318745,
+          "note": "Transfer sent to counterparty"
+        }
+      ],
+      "limitation": "The label describes the counterparty, not this wallet. Labels are provider assertions and may be incomplete or out of date.",
+      "recommendation": "Withdraw from exchanges to an intermediate address rather than directly to wallets you want kept separate.",
+      "subjects": [
+        "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K"
+      ]
+    },
+    {
+      "id": "recurring-HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN-1.500",
+      "category": "recurring",
+      "title": "Repeated 1.500 SOL payment",
+      "severity": "medium",
+      "confidence": "high",
+      "observation": "11 outbound transfers of 1.500 SOL to HVqm\u2026YwrN. Fixed amounts on a repeating basis read like a subscription, salary or scheduled transfer.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "Ci8SFjgd3k5izZ7teYJAWwyjrSSEKvinNLPMg7MTJsoWDinRhBzy9Tn5GCUW1ejLPn731nkL549xLpnfEzzACvy",
+          "timestamp": 1790779161,
+          "note": "1.500 SOL sent"
+        },
+        {
+          "kind": "tx",
+          "ref": "32GtSrjHTo73PoAQdpFDQ4F8pwG5Z17bxJZbi2trdPzpLKQBewqxpZFmcBdkPxN1Q1h9dX79s2isHLKm6MmfDAwP",
+          "timestamp": 1790167590,
+          "note": "1.500 SOL sent"
+        },
+        {
+          "kind": "tx",
+          "ref": "2ouQyu95K1ziZ9wpxtNtCWJmci8Ve5fD3f9ZEw5mjnk7kC1BunDpx7kpn2koxtcuPh7yAFvZeNddMpmdVprWYwfk",
+          "timestamp": 1789557313,
+          "note": "1.500 SOL sent"
+        },
+        {
+          "kind": "tx",
+          "ref": "4VYhDBx47hPFYPK3hJL1tJZrxCGoYEPJ2cFYrKjaatJRASxE1ebpRpZJAzJBsEYBCixHypBFaKLBepuUK5sbBbaP",
+          "timestamp": 1788960969,
+          "note": "1.500 SOL sent"
+        },
+        {
+          "kind": "tx",
+          "ref": "4nVY26uGUHnQNKXtpf6r2iqzzH9eZNYe9VJygLhmBhVqV74BSxJx3aMBNeFaZrfg6DrvNQkRhvRea3xtCEGEP6pn",
+          "timestamp": 1788354727,
+          "note": "1.500 SOL sent"
+        },
+        {
+          "kind": "tx",
+          "ref": "26ecMEEGh4uUkoJb1t786naLXP65u15RYJsFsTnXzGRnbphWpg96Q17bWMohAk3Fv1ajmFYeajv8hY5wxf2s8xm3",
+          "timestamp": 1787693757,
+          "note": "1.500 SOL sent"
+        }
+      ],
+      "limitation": "Amounts are matched to 0.001 SOL. A matching amount does not prove the payments share a purpose.",
+      "recommendation": "Vary amounts and the sending address for recurring payments you do not want to fingerprint this wallet.",
+      "subjects": [
+        "HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN"
+      ]
+    },
+    {
+      "id": "repeated-5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+      "category": "repeated-counterparty",
+      "title": "Recurring relationship with Demo Exchange (fictional)",
+      "severity": "medium",
+      "confidence": "high",
+      "observation": "7 transactions with this counterparty (in both directions): 62.9300 SOL received, 18.4000 SOL sent, 0 token transfers.",
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "5f3oBp3yavNusEiWwDxkwcSDqsazfQPtsnVYzUwJkkU2tX7NG95WzsMiNyzW9XR1YjHybnatG4c7YeMN3nMje4cC",
+          "timestamp": 1790509726,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "TGoXzE1n4BuF4trfrxdxg3BrHbs4bxCcztB3jnaFLBwKybK9Bsr8twZhQQDJrfQptX2LpAEgFaadGagUBiZV2iC",
+          "timestamp": 1790173066,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5ophe8p5RBgEXW4o5wwz4M4hF5yhXkKTjpZkD64ihyxQ8s5yMfDDCA5HNuURMpZG5zJKVqJK8w7iFUie4FRpkan5",
+          "timestamp": 1789389578,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2gsPhNzBfDsUj61Msf19jfHQzjC62TptCdYJnJLwgzBidmYKCpNAzNJk7NEKRi55WHBebgKszPC2DGvJ1WTn4Jmq",
+          "timestamp": 1787842159,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "uqGWQmo4DsanQ4EyN6nhWTvxkwo5M5ynQF4M9TdnAQyPiYe4qDokYsbd9itkMLy8x8E5hLhsvb8sk9qDQTNYMRd",
+          "timestamp": 1787318745,
+          "note": "Transfer sent to counterparty"
+        }
+      ],
+      "limitation": "Shows that the two addresses transacted, not who controls either one or why. The counterparty may be a service, a contract-owned account or another wallet of the same person.",
+      "recommendation": "Recurring transfers make two addresses easy to cluster. Use a fresh receiving address for relationships you do not want linked to this wallet.",
+      "subjects": [
+        "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K"
+      ]
+    }
+  ],
+  "counterparties": [
+    {
+      "address": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+      "inCount": 4,
+      "outCount": 9,
+      "txCount": 13,
+      "solIn": 4.965,
+      "solOut": 11.868,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784726722,
+      "lastSeen": 1790797664,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "35pZntzW6DioZBs4QXFth9KQHEAaYsXqqhpZ4ypPuDbZWZ65DsdBtGkd6LeUyaP4kwuEJkws4Jyq9J5K3C8PXjJq",
+          "timestamp": 1790797664,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2bnc1W5RWCpgu5MTmrP9rRUKcBG7P3BDTWQ47REKDmn3eynuaqJ8pdzfQuBvAfiiCUs4rnVZoZn51ZqMfJC4vY81",
+          "timestamp": 1790516922,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4ajtNq6r8yu4GbbBXGkizXptSX5GcDRj7t6jtjw9UK1WP94hDLxri72pGxsdNHYVmMSNER2qy19PR6h4RKwJXSAP",
+          "timestamp": 1790078771,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2SekUA4pvKEf2r6uKYb5YGBLQGSk8etJpCkbkSLU1CP4pwnNLikdXqwP7ttVcwJHphws1tVvcZhMMKFotJJceZSD",
+          "timestamp": 1789386805,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5RN1hjBkiA5v5hHwNWN8gYkUx71SWipjE7cAdjonVikfZqyNwDcjpjvLRFFT6Xh6iMVi8fgHyNiHMppCSU971da9",
+          "timestamp": 1789211791,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN",
+      "inCount": 0,
+      "outCount": 11,
+      "txCount": 11,
+      "solIn": 0,
+      "solOut": 16.5,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784718365,
+      "lastSeen": 1790779161,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "Ci8SFjgd3k5izZ7teYJAWwyjrSSEKvinNLPMg7MTJsoWDinRhBzy9Tn5GCUW1ejLPn731nkL549xLpnfEzzACvy",
+          "timestamp": 1790779161,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "32GtSrjHTo73PoAQdpFDQ4F8pwG5Z17bxJZbi2trdPzpLKQBewqxpZFmcBdkPxN1Q1h9dX79s2isHLKm6MmfDAwP",
+          "timestamp": 1790167590,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2ouQyu95K1ziZ9wpxtNtCWJmci8Ve5fD3f9ZEw5mjnk7kC1BunDpx7kpn2koxtcuPh7yAFvZeNddMpmdVprWYwfk",
+          "timestamp": 1789557313,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4VYhDBx47hPFYPK3hJL1tJZrxCGoYEPJ2cFYrKjaatJRASxE1ebpRpZJAzJBsEYBCixHypBFaKLBepuUK5sbBbaP",
+          "timestamp": 1788960969,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4nVY26uGUHnQNKXtpf6r2iqzzH9eZNYe9VJygLhmBhVqV74BSxJx3aMBNeFaZrfg6DrvNQkRhvRea3xtCEGEP6pn",
+          "timestamp": 1788354727,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+      "inCount": 5,
+      "outCount": 2,
+      "txCount": 7,
+      "solIn": 62.93,
+      "solOut": 18.4,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784410918,
+      "lastSeen": 1790509726,
+      "label": {
+        "address": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+        "name": "Demo Exchange (fictional)",
+        "category": "Centralized Exchange",
+        "type": "exchange",
+        "source": "demo"
+      },
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "5f3oBp3yavNusEiWwDxkwcSDqsazfQPtsnVYzUwJkkU2tX7NG95WzsMiNyzW9XR1YjHybnatG4c7YeMN3nMje4cC",
+          "timestamp": 1790509726,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "TGoXzE1n4BuF4trfrxdxg3BrHbs4bxCcztB3jnaFLBwKybK9Bsr8twZhQQDJrfQptX2LpAEgFaadGagUBiZV2iC",
+          "timestamp": 1790173066,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5ophe8p5RBgEXW4o5wwz4M4hF5yhXkKTjpZkD64ihyxQ8s5yMfDDCA5HNuURMpZG5zJKVqJK8w7iFUie4FRpkan5",
+          "timestamp": 1789389578,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2gsPhNzBfDsUj61Msf19jfHQzjC62TptCdYJnJLwgzBidmYKCpNAzNJk7NEKRi55WHBebgKszPC2DGvJ1WTn4Jmq",
+          "timestamp": 1787842159,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "uqGWQmo4DsanQ4EyN6nhWTvxkwo5M5ynQF4M9TdnAQyPiYe4qDokYsbd9itkMLy8x8E5hLhsvb8sk9qDQTNYMRd",
+          "timestamp": 1787318745,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "DEuFaGgdiXZZ3vPnLEgwU1LRws4p7evXjCWhQyNP6vQs",
+      "inCount": 0,
+      "outCount": 5,
+      "txCount": 5,
+      "solIn": 0,
+      "solOut": 0,
+      "tokenMoves": 5,
+      "mints": [
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+      ],
+      "firstSeen": 1785241356,
+      "lastSeen": 1788957073,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "2Srq4CXG3yJryiR3j57NV4B7GaZPzv3WDFH9iwRDWztmuiY8TThaKnqPagk4xJz6RiC6nxqq3TgmGMhWRiqQ8Fak",
+          "timestamp": 1788957073,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "5JosAWwxNp9AXoZvkYyx7Rcw3gpBiNhfaQqzM7vC9xAC9WmJ9dCsSqguk2ThURSWRRfgXCFHhrCHaasdZanVmjHr",
+          "timestamp": 1788870065,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2PeFoa1M2PtSUEgU8cZ5fDhYWTHkPfxjLzPQjezsq89LB9ew3fMwMGTb9C9W7Ec4ZdK5qZBVAqtxhLKVnkJDDXjp",
+          "timestamp": 1787834696,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2SNGrBRWmfWYPLi5GkkN7mXMBSQaxhUmuAoVSgiURBKt3oPXWVd19ykvufQMyLciqF5m1CdpZks6Pgpyn3nWWv5h",
+          "timestamp": 1786535481,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "3s2a9NXYMjwGuc68kfpdCQuhh2N5vQg9ofTdisVcSvCtiZoPWS9aXvfQtCwp2HAWP4RfNXZmPHXWW8bTgVPPXxRU",
+          "timestamp": 1785241356,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "7EyVHCDUawqKG8Fwf9y8iLAMaphacSeAeRSE61LsnkAU",
+      "inCount": 0,
+      "outCount": 3,
+      "txCount": 3,
+      "solIn": 0,
+      "solOut": 6.801666064,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1786969819,
+      "lastSeen": 1789134678,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "3BdEhPWs7V5Hx8uj2odvfGmREheWuh3XuWPUR5XGpzgQuDGxV3hr1gYn9ycMWCRrZnrdP5s28SHD5eyQroBG4bpV",
+          "timestamp": 1789134678,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "4XF394PJ1z4My21cMXaeGiCz79JGEk5Zd5cBQEAMhWfQt8wwPjdKkzLnbRgbhM5HNdpuricbLgrJcs24KgEePa1e",
+          "timestamp": 1788898507,
+          "note": "Transfer sent to counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "3gdB7u9ZeCpHisLnRE5GJavWWfgE7NZg1S2T3mP1t1CnYF8EzNXh9ikxpMZLKJGA21qCgNbfXpSEJco92bibqaNN",
+          "timestamp": 1786969819,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "3nD7gigLHYtMnTo59duVgyBf5zePAyw44cnWRfdV9LCH",
+      "inCount": 3,
+      "outCount": 0,
+      "txCount": 3,
+      "solIn": 1.8,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784551908,
+      "lastSeen": 1787751915,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "2LppVkvNtsFnSwypSAjPJ6JwoBaUpqnz7QzwmyZeRgRbGJwbDyaDS65GHUgZ8rhwxM9RYF9Uc4hEKehWD8StAucV",
+          "timestamp": 1787751915,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "2FgUyZCJBxzV8czLQDhfSK2JJarEbcvJFQ7mwtt667sgYkET3gUp42LZrhsVmwX2kvDkaH9R5QFBGLNrtMdjMhAW",
+          "timestamp": 1786112407,
+          "note": "Transfer received from counterparty"
+        },
+        {
+          "kind": "tx",
+          "ref": "t9nXZUKyD3hTnKbm2uF4Drezu5AYCyBwYSq9dYvxjJkLUyjwdaaSdWa27a9act2vkjuXBnyKCqutfvL5xJYhU8f",
+          "timestamp": 1784551908,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "CmPWq7oEfGc3JWx4vmLNedxwVmmGfvvq5cAo5RhPNBoe",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.781,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1787583019,
+      "lastSeen": 1787583019,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "4GgqUrx7fxztwqkkJQqQV2fXcgtsdTTmP79eQ8WoymSN3VqxftvHxDocPwqgVrddETy4R1E3VZy4GdMJauiG6BwD",
+          "timestamp": 1787583019,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "Ez4PeNtgPrsQAhNdwjeeJTpVxCuY8FtunSTR9oB6DveL",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.733,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1788522655,
+      "lastSeen": 1788522655,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "2kUkCbE3Fis7WQtiUrVRh2oQC416ipp3Et5vn7s8BsfAKvV8pfm7MQYH4L2ovcf3o5fRncyLBYGHrSdrqBDLgeni",
+          "timestamp": 1788522655,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "C8W9gtFDMuHTwof34W3NK3Abp9bsn2Z7PYT1jmSznvbJ",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.658,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1789732065,
+      "lastSeen": 1789732065,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "5Zs67LxhCr8syoxe7fjrKy9wSs458GHXdyxUapzHYochdhkKaR4pcrpZB8CEmt2RnhRKiPnS8LMWXP5JoZ12QD4s",
+          "timestamp": 1789732065,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "2wEiMzZJNic5snowt2V3YWCuAbqemQhNvRwHvp9V5ZQu",
+      "inCount": 1,
+      "outCount": 0,
+      "txCount": 1,
+      "solIn": 0.636,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1785150451,
+      "lastSeen": 1785150451,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "4qUJVbGPs7T14EMM3WY9MVKYe6EWSUAgiPJ3tTQQxbjE7GooNo7TxDk3SNVbVgr6RohBkKFXuyoU8dYhwSk9ZYiG",
+          "timestamp": 1785150451,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "FRAUHduD4MC7b5VkUMa6AtBTMpS3Mmm8x6QQDBVpsMpM",
+      "inCount": 1,
+      "outCount": 0,
+      "txCount": 1,
+      "solIn": 0.571,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784897587,
+      "lastSeen": 1784897587,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "nwQnyLqx7BuGojhSw3qED8KUuUHpLX9tujn3KUnAJLc54vjYef8gGmhuMUVriAjUmgeh58o4n3eBZdnLUxq7RjJ",
+          "timestamp": 1784897587,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "8CiGYYT5Eo5LRDHcSBLK85vAMdXeTTCkyn6WKMjCtret",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.567,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1790355694,
+      "lastSeen": 1790355694,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "3Qu3dvg6QBE3XTUFiCMSM65z58YyE6Ye6dTPN29SFvAEj3rbXU1Dog35wuiWmYnaDmuntK5BMak4YRaraVhAdz1T",
+          "timestamp": 1790355694,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "4cSV2LCBU75maC6RApuEYSAETPTuHctGDZjXMs77w2CX",
+      "inCount": 1,
+      "outCount": 0,
+      "txCount": 1,
+      "solIn": 0.538,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1790507475,
+      "lastSeen": 1790507475,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "74iNsT3p3u8xB61d5Ty3oMuwsmD6Y39U7zESDHk9NSSABm8XeL6JXfFpZatGr3EPiUJC5R2AGJfPXqjxnzScVxq",
+          "timestamp": 1790507475,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "EFHgL9wc7M1Az8w1Ea3y89aaQr98dUio7yhgTFy45one",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.385,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1785849778,
+      "lastSeen": 1785849778,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "3pffcR3QD7jTuNoC6fuVUAhyRejhDkLTLGL8zBDugYNynTnZkJNFisXDWmgBrcizsdSNKDeBdHt7J5dkxzovfTxt",
+          "timestamp": 1785849778,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "3qcy5t3xpu6azcW264ep55SwUmgg5SYYc3q5p31EsjGj",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.351,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1789045825,
+      "lastSeen": 1789045825,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "3GUF1L7opPACmWArreJyUiTf3xdh6rPgBALXsUjqwk8Zsgz2rtxpRwDtYDBwtHAuy6rYCWYLYEsejyPMcfFUwH1S",
+          "timestamp": 1789045825,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "3D74nE6hyzdaWBiPs7Lx3aD7GVtfysoakzvkGFCh7V2i",
+      "inCount": 1,
+      "outCount": 0,
+      "txCount": 1,
+      "solIn": 0.339,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1786766741,
+      "lastSeen": 1786766741,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "2znsHmZbSdXa53jFZfeF87jCk6obQcD9GSuH3ypUMekU9ztavb3snrNp5LZL7PZqNQGiZj45YPMVjAygxhxbpDq4",
+          "timestamp": 1786766741,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "ADdRNnA5UCCzWhCTcFBz4beUJTGRbLyr3KcAWECFSt9M",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.319,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1788523291,
+      "lastSeen": 1788523291,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "28xL4VUnxwWy6SW7XX3N6tB6YvEMKsRfKwFY9m3XvxVLrr4KeMF3mRHGGsvtEN2rrc4wioL6ssveRZE1URmo5a89",
+          "timestamp": 1788523291,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "HrUE3UqRu43XQJu5GATyGUi4LuV9BF2tEnjbeJGuUaUh",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.297,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1784645778,
+      "lastSeen": 1784645778,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "38WboeFQ6ARWUeQuhxrsekd55y26Xn5Gr3ghj1n6NwzQHszPHjMSiVAwMtNZRd8yWKB3Wdgtx2VtYu2QfuZe8XKJ",
+          "timestamp": 1784645778,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    },
+    {
+      "address": "Bz1w4Qz3QgXjX22YqTCoC2uPUzjhe3pp4K94bFKCLY8Q",
+      "inCount": 1,
+      "outCount": 0,
+      "txCount": 1,
+      "solIn": 0.169,
+      "solOut": 0,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1786631936,
+      "lastSeen": 1786631936,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "2HrAgGm4gjX8WT3PfgZUmk1TqeU8Pb7SV8kcBafkXSbyNtrNibchCu4n6fUwNi7SSXVsYW2ibZsqgQiXJbxGEQQx",
+          "timestamp": 1786631936,
+          "note": "Transfer received from counterparty"
+        }
+      ]
+    },
+    {
+      "address": "DKoTrRHVQGRCBagGF7KSZ5uPj1qsRt7RUGy9cBUXShvu",
+      "inCount": 0,
+      "outCount": 1,
+      "txCount": 1,
+      "solIn": 0,
+      "solOut": 0.118,
+      "tokenMoves": 0,
+      "mints": [],
+      "firstSeen": 1786557124,
+      "lastSeen": 1786557124,
+      "label": null,
+      "evidence": [
+        {
+          "kind": "tx",
+          "ref": "4qNRPvmjRmRHgpBvxhCUQFoiMhVRyYEtqMNxwGmVDbvRRS26VdzRx1Qp5TXi75aPsFJeNc55NeDqMCuSK96fwzcG",
+          "timestamp": 1786557124,
+          "note": "Transfer sent to counterparty"
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "address": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+    "lamports": 42371000000,
+    "sol": 42.371,
+    "solUsd": 6355.650000000001,
+    "holdings": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "symbol": "USDC",
+        "name": "USD Coin",
+        "amount": 1250.4,
+        "decimals": 6,
+        "usdValue": 1250.4,
+        "kind": "fungible"
+      },
+      {
+        "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "symbol": "JUP",
+        "name": "Jupiter",
+        "amount": 340.2,
+        "decimals": 6,
+        "usdValue": 272.16,
+        "kind": "fungible"
+      },
+      {
+        "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "symbol": "BONK",
+        "name": "Bonk",
+        "amount": 18400000,
+        "decimals": 5,
+        "usdValue": 368.00000000000006,
+        "kind": "fungible"
+      },
+      {
+        "mint": "E5w58pjmSKjusGe3avSmMiuCeVtx9mhZhCcZ1Sc5X2MU",
+        "symbol": "SPCMN",
+        "name": "Specimen Token (fictional)",
+        "amount": 9000,
+        "decimals": 6,
+        "usdValue": null,
+        "kind": "fungible"
+      },
+      {
+        "mint": "9FcwBK4dRAVbRR8Et8jeuqZTL3LUfCUTHFTD2W4ZtepC",
+        "symbol": null,
+        "name": "Fictional Collection #0412",
+        "amount": 1,
+        "decimals": 0,
+        "usdValue": null,
+        "kind": "nft"
+      },
+      {
+        "mint": "F6z8Rc5fQXxWecCM3fcLz3aWYQx3FctJnEtDxgmWL1Xm",
+        "symbol": null,
+        "name": "Fictional Collection #1187",
+        "amount": 1,
+        "decimals": 0,
+        "usdValue": null,
+        "kind": "nft"
+      }
+    ],
+    "truncated": false,
+    "fetchedAt": "2026-09-30T21:00:00.000Z"
+  },
+  "report": "<full ScanReport \u2014 identical to examples/report.demo.json>"
+}

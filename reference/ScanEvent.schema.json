@@ -1,0 +1,1423 @@
+{
+  "$ref": "#/definitions/ScanEvent",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ScanEvent": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "type": "number"
+            },
+            "detail": {
+              "type": "string"
+            },
+            "stage": {
+              "enum": [
+                "connecting",
+                "retrieving",
+                "mapping",
+                "analyzing",
+                "reporting"
+              ],
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "start",
+                "done"
+              ],
+              "type": "string"
+            },
+            "type": {
+              "const": "stage",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stage",
+            "status",
+            "at"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "type": "number"
+            },
+            "detail": {
+              "type": "string"
+            },
+            "stage": {
+              "enum": [
+                "connecting",
+                "retrieving",
+                "mapping",
+                "analyzing",
+                "reporting"
+              ],
+              "type": "string"
+            },
+            "type": {
+              "const": "progress",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stage",
+            "detail",
+            "at"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "report": {
+              "additionalProperties": false,
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "balances": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "fetchedAt": {
+                      "type": "string"
+                    },
+                    "holdings": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "amount": {
+                            "type": "number"
+                          },
+                          "decimals": {
+                            "type": "number"
+                          },
+                          "kind": {
+                            "enum": [
+                              "fungible",
+                              "nft"
+                            ],
+                            "type": "string"
+                          },
+                          "mint": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "symbol": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "usdValue": {
+                            "description": "USD value as reported by the provider; null when no price is published.",
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "mint",
+                          "symbol",
+                          "name",
+                          "amount",
+                          "decimals",
+                          "usdValue",
+                          "kind"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "lamports": {
+                      "type": "number"
+                    },
+                    "sol": {
+                      "type": "number"
+                    },
+                    "solUsd": {
+                      "description": "USD value of SOL when the provider publishes a price; null otherwise.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "truncated": {
+                      "description": "True when the holdings list hit the server-side cap.",
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "lamports",
+                    "sol",
+                    "solUsd",
+                    "holdings",
+                    "truncated",
+                    "fetchedAt"
+                  ],
+                  "type": "object"
+                },
+                "counterparties": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "address": {
+                        "type": "string"
+                      },
+                      "evidence": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "kind": {
+                              "description": "tx = transaction signature, account = an address, token = a mint.",
+                              "enum": [
+                                "tx",
+                                "account",
+                                "token"
+                              ],
+                              "type": "string"
+                            },
+                            "note": {
+                              "type": "string"
+                            },
+                            "ref": {
+                              "type": "string"
+                            },
+                            "timestamp": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "ref",
+                            "timestamp",
+                            "note"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "firstSeen": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "inCount": {
+                        "description": "in = counterparty sent to the wallet, out = wallet sent to counterparty.",
+                        "type": "number"
+                      },
+                      "label": {
+                        "anyOf": [
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "address": {
+                                "type": "string"
+                              },
+                              "category": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "source": {
+                                "description": "Who asserted the label. CLOAK never invents one.",
+                                "enum": [
+                                  "helius-identity",
+                                  "demo"
+                                ],
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "address",
+                              "name",
+                              "category",
+                              "type",
+                              "source"
+                            ],
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "lastSeen": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "mints": {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "outCount": {
+                        "type": "number"
+                      },
+                      "solIn": {
+                        "type": "number"
+                      },
+                      "solOut": {
+                        "type": "number"
+                      },
+                      "tokenMoves": {
+                        "type": "number"
+                      },
+                      "txCount": {
+                        "description": "Transactions in which this counterparty appeared on a transfer leg.",
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "inCount",
+                      "outCount",
+                      "txCount",
+                      "solIn",
+                      "solOut",
+                      "tokenMoves",
+                      "mints",
+                      "firstSeen",
+                      "lastSeen",
+                      "label",
+                      "evidence"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "counterpartyTotal": {
+                  "type": "number"
+                },
+                "coverage": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "failedCount": {
+                      "type": "number"
+                    },
+                    "fetchedAt": {
+                      "type": "string"
+                    },
+                    "limitReached": {
+                      "description": "True when the window was capped before reaching the start of history.",
+                      "type": "boolean"
+                    },
+                    "newest": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "oldest": {
+                      "description": "Unix seconds of the oldest / newest analyzed transaction.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "pagesFetched": {
+                      "type": "number"
+                    },
+                    "requestedLimit": {
+                      "type": "number"
+                    },
+                    "spanDays": {
+                      "type": "number"
+                    },
+                    "successCount": {
+                      "type": "number"
+                    },
+                    "txCount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "txCount",
+                    "successCount",
+                    "failedCount",
+                    "oldest",
+                    "newest",
+                    "spanDays",
+                    "pagesFetched",
+                    "requestedLimit",
+                    "limitReached",
+                    "fetchedAt"
+                  ],
+                  "type": "object"
+                },
+                "dna": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "counterpartyHhi": {
+                      "description": "Herfindahl-Hirschman index over counterparty interaction counts, 0..1.",
+                      "type": "number"
+                    },
+                    "daily": {
+                      "description": "Daily counts across the coverage window (UTC dates).",
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "count": {
+                            "type": "number"
+                          },
+                          "date": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "date",
+                          "count"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "heatmap": {
+                      "description": "[dayOfWeek 0=Sun][hourUTC] transaction counts.",
+                      "items": {
+                        "items": {
+                          "type": "number"
+                        },
+                        "type": "array"
+                      },
+                      "type": "array"
+                    },
+                    "hourly": {
+                      "items": {
+                        "type": "number"
+                      },
+                      "type": "array"
+                    },
+                    "kindMix": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "count": {
+                            "type": "number"
+                          },
+                          "kind": {
+                            "enum": [
+                              "transfer",
+                              "swap",
+                              "liquidity",
+                              "account",
+                              "program",
+                              "failed",
+                              "unknown"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "count"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "medianGapSeconds": {
+                      "description": "Median seconds between consecutive transactions.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "peakWindowShare": {
+                      "description": "Share of transactions inside the busiest contiguous 4-hour UTC window.",
+                      "type": "number"
+                    },
+                    "peakWindowStartHour": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "programs": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "share": {
+                            "type": "number"
+                          },
+                          "txCount": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "txCount",
+                          "share"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "protocolMix": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "count": {
+                            "type": "number"
+                          },
+                          "protocol": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "protocol",
+                          "count"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "top3CounterpartyShare": {
+                      "type": "number"
+                    },
+                    "trading": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "distinctMintsTraded": {
+                          "type": "number"
+                        },
+                        "swapCount": {
+                          "type": "number"
+                        },
+                        "topPairs": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "count": {
+                                "type": "number"
+                              },
+                              "pair": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "pair",
+                              "count"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "venues": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "count": {
+                                "type": "number"
+                              },
+                              "protocol": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "protocol",
+                              "count"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "swapCount",
+                        "distinctMintsTraded",
+                        "venues",
+                        "topPairs"
+                      ],
+                      "type": "object"
+                    },
+                    "transfersPerWeek": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "weekday": {
+                      "items": {
+                        "type": "number"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "heatmap",
+                    "hourly",
+                    "weekday",
+                    "daily",
+                    "kindMix",
+                    "protocolMix",
+                    "programs",
+                    "medianGapSeconds",
+                    "peakWindowShare",
+                    "peakWindowStartHour",
+                    "counterpartyHhi",
+                    "top3CounterpartyShare",
+                    "trading",
+                    "transfersPerWeek"
+                  ],
+                  "type": "object"
+                },
+                "generatedAt": {
+                  "type": "string"
+                },
+                "graph": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "center": {
+                      "type": "string"
+                    },
+                    "depth": {
+                      "enum": [
+                        1,
+                        2
+                      ],
+                      "type": "number"
+                    },
+                    "edges": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "count": {
+                            "description": "Number of transactions with a transfer leg in this direction.",
+                            "type": "number"
+                          },
+                          "evidence": {
+                            "items": {
+                              "additionalProperties": false,
+                              "properties": {
+                                "kind": {
+                                  "description": "tx = transaction signature, account = an address, token = a mint.",
+                                  "enum": [
+                                    "tx",
+                                    "account",
+                                    "token"
+                                  ],
+                                  "type": "string"
+                                },
+                                "note": {
+                                  "type": "string"
+                                },
+                                "ref": {
+                                  "type": "string"
+                                },
+                                "timestamp": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "kind",
+                                "ref",
+                                "timestamp",
+                                "note"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "sol": {
+                            "type": "number"
+                          },
+                          "source": {
+                            "type": "string"
+                          },
+                          "target": {
+                            "type": "string"
+                          },
+                          "tokenMoves": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "source",
+                          "target",
+                          "count",
+                          "sol",
+                          "tokenMoves",
+                          "evidence"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "limits": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "maxNodes": {
+                          "type": "number"
+                        },
+                        "maxSecondHopSeeds": {
+                          "type": "number"
+                        },
+                        "secondHopTxPerSeed": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "maxNodes",
+                        "maxSecondHopSeeds",
+                        "secondHopTxPerSeed"
+                      ],
+                      "type": "object"
+                    },
+                    "nodes": {
+                      "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "hop": {
+                            "enum": [
+                              0,
+                              1,
+                              2
+                            ],
+                            "type": "number"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "anyOf": [
+                              {
+                                "additionalProperties": false,
+                                "properties": {
+                                  "address": {
+                                    "type": "string"
+                                  },
+                                  "category": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "source": {
+                                    "description": "Who asserted the label. CLOAK never invents one.",
+                                    "enum": [
+                                      "helius-identity",
+                                      "demo"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "type": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "address",
+                                  "name",
+                                  "category",
+                                  "type",
+                                  "source"
+                                ],
+                                "type": "object"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "role": {
+                            "enum": [
+                              "center",
+                              "counterparty",
+                              "second-hop"
+                            ],
+                            "type": "string"
+                          },
+                          "txCount": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "role",
+                          "label",
+                          "txCount",
+                          "hop"
+                        ],
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "truncated": {
+                      "description": "True when node/edge caps removed observed relationships.",
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "center",
+                    "nodes",
+                    "edges",
+                    "depth",
+                    "truncated",
+                    "limits"
+                  ],
+                  "type": "object"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "labelSupport": {
+                  "enum": [
+                    "supported",
+                    "unsupported-plan",
+                    "unavailable",
+                    "demo"
+                  ],
+                  "type": "string"
+                },
+                "methodologyVersion": {
+                  "type": "string"
+                },
+                "mode": {
+                  "description": "Stable domain models. Every provider response is normalized into these shapes before any analysis runs, so the analysis layer never sees Helius field names and the demo dataset can travel through the exact same code.",
+                  "enum": [
+                    "live",
+                    "demo"
+                  ],
+                  "type": "string"
+                },
+                "recent": {
+                  "description": "Recent transactions for the evidence table (bounded).",
+                  "items": {
+                    "additionalProperties": false,
+                    "description": "One normalized on-chain transaction touching the analyzed wallet.",
+                    "properties": {
+                      "description": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "feeLamports": {
+                        "type": "number"
+                      },
+                      "feePayer": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "kind": {
+                        "enum": [
+                          "transfer",
+                          "swap",
+                          "liquidity",
+                          "account",
+                          "program",
+                          "failed",
+                          "unknown"
+                        ],
+                        "type": "string"
+                      },
+                      "nativeMoves": {
+                        "items": {
+                          "additionalProperties": false,
+                          "description": "A SOL movement in lamports. Either side may be unknown.",
+                          "properties": {
+                            "from": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "lamports": {
+                              "type": "number"
+                            },
+                            "to": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "from",
+                            "to",
+                            "lamports"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "programs": {
+                        "description": "Distinct top-level + inner program ids, in first-seen order.",
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "protocol": {
+                        "description": "Swap/liquidity venue reported by the provider (e.g. \"jupiter\").",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "signature": {
+                        "type": "string"
+                      },
+                      "slot": {
+                        "type": "number"
+                      },
+                      "success": {
+                        "type": "boolean"
+                      },
+                      "summaryType": {
+                        "description": "Provider summary type verbatim (e.g. \"swap\", \"transfer\"), when present.",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "swap": {
+                        "anyOf": [
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "inputMint": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "outputMint": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "inputMint",
+                              "outputMint"
+                            ],
+                            "type": "object"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ],
+                        "description": "Swap input/output mints when the provider reports them."
+                      },
+                      "timestamp": {
+                        "description": "Unix seconds. null when the provider has no block time.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "tokenMoves": {
+                        "items": {
+                          "additionalProperties": false,
+                          "description": "An SPL / Token-2022 movement. `amount` is UI units (raw / 10^decimals).",
+                          "properties": {
+                            "amount": {
+                              "type": "number"
+                            },
+                            "decimals": {
+                              "type": "number"
+                            },
+                            "from": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "mint": {
+                              "type": "string"
+                            },
+                            "to": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "from",
+                            "to",
+                            "mint",
+                            "amount",
+                            "decimals"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "signature",
+                      "timestamp",
+                      "slot",
+                      "feeLamports",
+                      "feePayer",
+                      "success",
+                      "kind",
+                      "summaryType",
+                      "protocol",
+                      "description",
+                      "nativeMoves",
+                      "tokenMoves",
+                      "programs",
+                      "swap"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "score": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "band": {
+                          "enum": [
+                            "low",
+                            "moderate",
+                            "elevated",
+                            "high"
+                          ],
+                          "type": "string"
+                        },
+                        "components": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "basis": {
+                                "type": "string"
+                              },
+                              "key": {
+                                "type": "string"
+                              },
+                              "label": {
+                                "type": "string"
+                              },
+                              "points": {
+                                "description": "Points contributed after renormalization.",
+                                "type": "number"
+                              },
+                              "raw": {
+                                "description": "Normalized 0..1 indicator strength, or null when not evaluated.",
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "weight": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "key",
+                              "label",
+                              "weight",
+                              "raw",
+                              "points",
+                              "basis"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "evaluatedWeight": {
+                          "type": "number"
+                        },
+                        "methodologyVersion": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "const": "scored",
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value",
+                        "band",
+                        "components",
+                        "evaluatedWeight",
+                        "methodologyVersion"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "components": {
+                          "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "basis": {
+                                "type": "string"
+                              },
+                              "key": {
+                                "type": "string"
+                              },
+                              "label": {
+                                "type": "string"
+                              },
+                              "points": {
+                                "description": "Points contributed after renormalization.",
+                                "type": "number"
+                              },
+                              "raw": {
+                                "description": "Normalized 0..1 indicator strength, or null when not evaluated.",
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "weight": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "key",
+                              "label",
+                              "weight",
+                              "raw",
+                              "points",
+                              "basis"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "methodologyVersion": {
+                          "type": "string"
+                        },
+                        "reason": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "const": "insufficient",
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value",
+                        "reason",
+                        "components",
+                        "methodologyVersion"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                },
+                "signals": {
+                  "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "category": {
+                        "enum": [
+                          "holdings",
+                          "repeated-counterparty",
+                          "concentration",
+                          "temporal",
+                          "program",
+                          "trading",
+                          "labeling",
+                          "funding",
+                          "recurring"
+                        ],
+                        "type": "string"
+                      },
+                      "confidence": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ],
+                        "type": "string"
+                      },
+                      "evidence": {
+                        "items": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "kind": {
+                              "description": "tx = transaction signature, account = an address, token = a mint.",
+                              "enum": [
+                                "tx",
+                                "account",
+                                "token"
+                              ],
+                              "type": "string"
+                            },
+                            "note": {
+                              "type": "string"
+                            },
+                            "ref": {
+                              "type": "string"
+                            },
+                            "timestamp": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "ref",
+                            "timestamp",
+                            "note"
+                          ],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "limitation": {
+                        "type": "string"
+                      },
+                      "observation": {
+                        "type": "string"
+                      },
+                      "recommendation": {
+                        "type": "string"
+                      },
+                      "severity": {
+                        "enum": [
+                          "low",
+                          "medium",
+                          "high"
+                        ],
+                        "type": "string"
+                      },
+                      "subjects": {
+                        "description": "Addresses this signal is about (counterparties, mints).",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "category",
+                      "title",
+                      "severity",
+                      "confidence",
+                      "observation",
+                      "evidence",
+                      "limitation",
+                      "recommendation",
+                      "subjects"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "walletLabel": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "address": {
+                          "type": "string"
+                        },
+                        "category": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "source": {
+                          "description": "Who asserted the label. CLOAK never invents one.",
+                          "enum": [
+                            "helius-identity",
+                            "demo"
+                          ],
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "address",
+                        "name",
+                        "category",
+                        "type",
+                        "source"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "address",
+                "mode",
+                "generatedAt",
+                "balances",
+                "coverage",
+                "counterparties",
+                "counterpartyTotal",
+                "graph",
+                "dna",
+                "signals",
+                "score",
+                "labelSupport",
+                "walletLabel",
+                "methodologyVersion",
+                "recent"
+              ],
+              "type": "object"
+            },
+            "type": {
+              "const": "result",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "report"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "retryable": {
+              "type": "boolean"
+            },
+            "stage": {
+              "enum": [
+                "connecting",
+                "retrieving",
+                "mapping",
+                "analyzing",
+                "reporting",
+                null
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "const": "error",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "stage",
+            "code",
+            "message",
+            "retryable"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  }
+}
+

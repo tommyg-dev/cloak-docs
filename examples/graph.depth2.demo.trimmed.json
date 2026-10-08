@@ -1,0 +1,364 @@
+{
+  "mode": "demo",
+  "demo": true,
+  "graph": {
+    "center": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+    "nodes": [
+      {
+        "id": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "role": "center",
+        "label": null,
+        "txCount": 96,
+        "hop": 0
+      },
+      {
+        "id": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "role": "counterparty",
+        "label": null,
+        "txCount": 13,
+        "hop": 1
+      },
+      {
+        "id": "HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN",
+        "role": "counterparty",
+        "label": null,
+        "txCount": 11,
+        "hop": 1
+      },
+      {
+        "id": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+        "role": "counterparty",
+        "label": {
+          "address": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+          "name": "Demo Exchange (fictional)",
+          "category": "Centralized Exchange",
+          "type": "exchange",
+          "source": "demo"
+        },
+        "txCount": 7,
+        "hop": 1
+      },
+      {
+        "id": "FAeUCm7BJbDwCniypzbexdBo6cVkncjwPrt4BzbXPQ5C",
+        "role": "second-hop",
+        "label": null,
+        "txCount": 5,
+        "hop": 2
+      },
+      {
+        "id": "HDmznSkQzgXWt7Bi2aVmGN9637N1BZx7DCX6vEaJHcum",
+        "role": "second-hop",
+        "label": null,
+        "txCount": 4,
+        "hop": 2
+      },
+      {
+        "id": "74bW4CZyaS9Faxdrg13BD72uqJxShHCCvibqTCSpbZRp",
+        "role": "second-hop",
+        "label": null,
+        "txCount": 3,
+        "hop": 2
+      }
+    ],
+    "edges": [
+      {
+        "id": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11->HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN",
+        "source": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "target": "HVqm5zhFip2XLKaibdbAQD84hRX9SKLm7DvYz577YwrN",
+        "count": 11,
+        "sol": 16.5,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "Ci8SFjgd3k5izZ7teYJAWwyjrSSEKvinNLPMg7MTJsoWDinRhBzy9Tn5GCUW1ejLPn731nkL549xLpnfEzzACvy",
+            "timestamp": 1790779161,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "32GtSrjHTo73PoAQdpFDQ4F8pwG5Z17bxJZbi2trdPzpLKQBewqxpZFmcBdkPxN1Q1h9dX79s2isHLKm6MmfDAwP",
+            "timestamp": 1790167590,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "2ouQyu95K1ziZ9wpxtNtCWJmci8Ve5fD3f9ZEw5mjnk7kC1BunDpx7kpn2koxtcuPh7yAFvZeNddMpmdVprWYwfk",
+            "timestamp": 1789557313,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "4VYhDBx47hPFYPK3hJL1tJZrxCGoYEPJ2cFYrKjaatJRASxE1ebpRpZJAzJBsEYBCixHypBFaKLBepuUK5sbBbaP",
+            "timestamp": 1788960969,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11->7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "source": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "target": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "count": 9,
+        "sol": 11.868,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "35pZntzW6DioZBs4QXFth9KQHEAaYsXqqhpZ4ypPuDbZWZ65DsdBtGkd6LeUyaP4kwuEJkws4Jyq9J5K3C8PXjJq",
+            "timestamp": 1790797664,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "4ajtNq6r8yu4GbbBXGkizXptSX5GcDRj7t6jtjw9UK1WP94hDLxri72pGxsdNHYVmMSNER2qy19PR6h4RKwJXSAP",
+            "timestamp": 1790078771,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5RN1hjBkiA5v5hHwNWN8gYkUx71SWipjE7cAdjonVikfZqyNwDcjpjvLRFFT6Xh6iMVi8fgHyNiHMppCSU971da9",
+            "timestamp": 1789211791,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "2b7rtyR24Kv6S1rMv8RUKjjQYWnckxQPJs8x2y7gQG7PAbyRKnkvSzxDkqEwMvjw6A4P5PEBBjtaui1CrXNT5bqo",
+            "timestamp": 1788361079,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K->CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "source": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+        "target": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "count": 5,
+        "sol": 62.93,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "5f3oBp3yavNusEiWwDxkwcSDqsazfQPtsnVYzUwJkkU2tX7NG95WzsMiNyzW9XR1YjHybnatG4c7YeMN3nMje4cC",
+            "timestamp": 1790509726,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5ophe8p5RBgEXW4o5wwz4M4hF5yhXkKTjpZkD64ihyxQ8s5yMfDDCA5HNuURMpZG5zJKVqJK8w7iFUie4FRpkan5",
+            "timestamp": 1789389578,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "2gsPhNzBfDsUj61Msf19jfHQzjC62TptCdYJnJLwgzBidmYKCpNAzNJk7NEKRi55WHBebgKszPC2DGvJ1WTn4Jmq",
+            "timestamp": 1787842159,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "2wz2LhpBYeMPi6bgQaWpX8b3tjK3dBBM9k5PGpXE2Ln1P1qFAQn8N1qr5YTENbaUQDmhPgDqMBxZUpZxt6CaEmfs",
+            "timestamp": 1786024696,
+            "note": "Inbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp->CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "source": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "target": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "count": 4,
+        "sol": 4.965,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "2bnc1W5RWCpgu5MTmrP9rRUKcBG7P3BDTWQ47REKDmn3eynuaqJ8pdzfQuBvAfiiCUs4rnVZoZn51ZqMfJC4vY81",
+            "timestamp": 1790516922,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "2SekUA4pvKEf2r6uKYb5YGBLQGSk8etJpCkbkSLU1CP4pwnNLikdXqwP7ttVcwJHphws1tVvcZhMMKFotJJceZSD",
+            "timestamp": 1789386805,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5nGPixqfEVpAnY8fA4iSuo6Uk5S6FYfpFnwQ3RKTC7hxzToW2R6E6LYGVAqCeHYmb6JuCtp4wAQzx5vmVBwKCKjf",
+            "timestamp": 1787992252,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5HXQqJhF5HLCYKHMmSHjo7QTZGncuc22Tx64nu5PRmojg3Vmk9jWTTbteTZJvYmEUuJ23uwGHsmGXrkZTAhvQeh1",
+            "timestamp": 1785783249,
+            "note": "Inbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp->FAeUCm7BJbDwCniypzbexdBo6cVkncjwPrt4BzbXPQ5C",
+        "source": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "target": "FAeUCm7BJbDwCniypzbexdBo6cVkncjwPrt4BzbXPQ5C",
+        "count": 3,
+        "sol": 5.038077015,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "5YahGHRMahSLFR6gYxzu5RCtaeGk78oUC1YgT2qmvyCjRuooGt9KiAYJdoyJ8Jjiku78m2NQ3hFaebigy1EvV6FJ",
+            "timestamp": 1790624951,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5dxT75EewA6jAJ3Cyq4keTzjuMDgDcxZkW4p9G6n6dZWCSWSeS6TDS84rrM2DfDmL51Ujua3F5spuY6HFMzp1FxD",
+            "timestamp": 1788336055,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "5NB3rVxUrF6FsEuwvFPpDB5QpyspdPs8YmFy1rmPoUyVMDNQuvvUUjZWNphrcUFiq1WWc8a49ktgfvKmbiz9qVHN",
+            "timestamp": 1785325552,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp->74bW4CZyaS9Faxdrg13BD72uqJxShHCCvibqTCSpbZRp",
+        "source": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "target": "74bW4CZyaS9Faxdrg13BD72uqJxShHCCvibqTCSpbZRp",
+        "count": 2,
+        "sol": 3.201176581,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "CCDAPFRER8XZ4b6Jf6wUNzEngoXMCh47fkqpHDYdf68QNT1n174xLfX9d2PpLCM3Q5vKmsEWtRHsbgGCtoBM4ht",
+            "timestamp": 1788608603,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "677erPey5CLu74bDoJL8HgjZJjaavdH6nF1Whv491qWinAuN5QWcxySqf87ZQ2XpDNDJWZjGS3kohJSJY9jmMevi",
+            "timestamp": 1784414802,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp->HDmznSkQzgXWt7Bi2aVmGN9637N1BZx7DCX6vEaJHcum",
+        "source": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "target": "HDmznSkQzgXWt7Bi2aVmGN9637N1BZx7DCX6vEaJHcum",
+        "count": 2,
+        "sol": 3.295896815,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "5GbvDMtqAvoCMNJpUmsCo57wAcu8ZnndCNUn6pqADpjnaW79kPjX7y9X2ivRHK4jHPZgiTmaLX2Z4UbJApW58TTV",
+            "timestamp": 1785609793,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "TPUHyYCpUpPMt68haKHH7C4HWjMfrE6LZsns4KVThEgxi6HcqUNYKhVhBU14JGgbDnv1atpBLcgbhfhzgB5GwkS",
+            "timestamp": 1785557099,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11->5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+        "source": "CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11",
+        "target": "5XuRMmAxmLo64UhyQF4jNc7sNVUCHDSwehBy5Wqvrh9K",
+        "count": 2,
+        "sol": 18.4,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "TGoXzE1n4BuF4trfrxdxg3BrHbs4bxCcztB3jnaFLBwKybK9Bsr8twZhQQDJrfQptX2LpAEgFaadGagUBiZV2iC",
+            "timestamp": 1790173066,
+            "note": "Outbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "uqGWQmo4DsanQ4EyN6nhWTvxkwo5M5ynQF4M9TdnAQyPiYe4qDokYsbd9itkMLy8x8E5hLhsvb8sk9qDQTNYMRd",
+            "timestamp": 1787318745,
+            "note": "Outbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "FAeUCm7BJbDwCniypzbexdBo6cVkncjwPrt4BzbXPQ5C->7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "source": "FAeUCm7BJbDwCniypzbexdBo6cVkncjwPrt4BzbXPQ5C",
+        "target": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "count": 2,
+        "sol": 3.855001202,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "4SjJouSHR8xhosc23budGifVo24fYsEaxE8ejDUEKQreETP6vHCbceQjXWzUnZdjmQ6PYD9cCJX1E1TNQXReSutk",
+            "timestamp": 1786315558,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "3CAeeGWs2g3zKHyC8R5wQLbD9k3zHEatn6ib2qJRmwUHnx3g9DKPg7CrUmkXnVDZpDq2CXw9MongDd15ts6t7fN7",
+            "timestamp": 1784784956,
+            "note": "Inbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "HDmznSkQzgXWt7Bi2aVmGN9637N1BZx7DCX6vEaJHcum->7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "source": "HDmznSkQzgXWt7Bi2aVmGN9637N1BZx7DCX6vEaJHcum",
+        "target": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "count": 2,
+        "sol": 4.984968318,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "3VqqE7w6HWCiqW7htVqGCicNuMDwjoJkoGcAbP5wGQHunmLeeUHkVSMc3tuqKJkX2aHUwajNj3yrKzf8SYncTdwi",
+            "timestamp": 1790747593,
+            "note": "Inbound transfer"
+          },
+          {
+            "kind": "tx",
+            "ref": "4sxEM2BcERCYH7o7Uvw4UgkojXhizPUwPZ1oCoDqdwJt2MxzfeuZzEA3qwna8U7gHngqgA7dcKGP1HoCHMUVpN7R",
+            "timestamp": 1789505125,
+            "note": "Inbound transfer"
+          }
+        ]
+      },
+      {
+        "id": "74bW4CZyaS9Faxdrg13BD72uqJxShHCCvibqTCSpbZRp->7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "source": "74bW4CZyaS9Faxdrg13BD72uqJxShHCCvibqTCSpbZRp",
+        "target": "7n6sBYjn3JUm1yoLmgWNGKDXatDDPf814nrWHHZ3Lktp",
+        "count": 1,
+        "sol": 0.101532225,
+        "tokenMoves": 0,
+        "evidence": [
+          {
+            "kind": "tx",
+            "ref": "2jPaZesTXDeuEw5zaEMDRtsWpcotYbonJnDFWxWDciKiAgWtYsCfuhiCFHNf4Dg1REDrWcQLiz7J195vne5qSDgF",
+            "timestamp": 1786367293,
+            "note": "Inbound transfer"
+          }
+        ]
+      }
+    ],
+    "depth": 2,
+    "truncated": false,
+    "limits": {
+      "maxNodes": 80,
+      "maxSecondHopSeeds": 5,
+      "secondHopTxPerSeed": 50
+    }
+  },
+  "\u2026": "trimmed from 43 nodes / 68 edges to the subject, 3 first-hop and 3 connected second-hop nodes"
+}

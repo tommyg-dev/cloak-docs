@@ -1,0 +1,13 @@
+{"type":"stage","stage":"connecting","status":"start","at":1791472590037}
+{"type":"stage","stage":"connecting","status":"done","detail":"Demo mode · fictional dataset · no provider calls","at":1791472590037}
+{"type":"stage","stage":"retrieving","status":"start","at":1791472590037}
+{"type":"progress","stage":"retrieving","detail":"Loaded 96 fictional transactions (DEMO DATA)","at":1791472590037}
+{"type":"stage","stage":"retrieving","status":"done","detail":"96 transactions · 1 page · 6 holdings","at":1791472590037}
+{"type":"stage","stage":"mapping","status":"start","at":1791472590037}
+{"type":"progress","stage":"mapping","detail":"96 normalized · 3 failed on-chain","at":1791472590037}
+{"type":"stage","stage":"mapping","status":"done","detail":"96 transactions · 20 counterparties · 1 public label","at":1791472590037}
+{"type":"stage","stage":"analyzing","status":"start","at":1791472590037}
+{"type":"stage","stage":"analyzing","status":"done","detail":"9 signals · CLOAK Index 77","at":1791472590039}
+{"type":"stage","stage":"reporting","status":"start","at":1791472590039}
+{"type":"stage","stage":"reporting","status":"done","detail":"Report GR-0URAI4F","at":1791472590039}
+{"type":"result","report":{"id":"GR-0URAI4F","address":"CLoAKdemo7SpecimenWa11etXXfictiona1PubKey11","mode":"demo","score":{"status":"scored","value":77,"band":"high"},"…":"full ScanReport — see examples/report.demo.json"}}
